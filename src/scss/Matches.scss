@@ -1,0 +1,48 @@
+.matches {
+  h2 {
+    text-align: center;
+  }
+  .nav-matches {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.match-group-date {
+  background: #fff6f6;
+
+  margin: 1rem 0;
+  padding: 1rem;
+
+  .match-date {
+    font-size: 1.5rem;
+  }
+}
+
+.match-group-league {
+  background: #ffdfdf;
+  margin: 1rem 0;
+  padding: 1rem;
+
+  .match-league {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.match {
+  display: flex;
+  justify-content: space-between;
+
+  .home-team {
+    width: 40%;
+  }
+  .match-info {
+    width: 20%;
+    text-align: center;
+  }
+  .away-team {
+    width: 40%;
+    text-align: right;
+  }
+}
