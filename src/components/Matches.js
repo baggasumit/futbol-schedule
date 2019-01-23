@@ -30,11 +30,8 @@ class Matches extends Component {
     console.log('props:startDate', this.props.startDate);
     const startDate =
       this.props.startDate || formatDate(new Date(), 'YYYY-MM-DD');
-    // const today = formatDate(new Date(), 'YYYY-MM-DD');
     const endDate = formatDate(addDays(startDate, 6), 'YYYY-MM-DD');
-    // const url = `http://api.football-data.org/v2/matches?competitions=PL,PD,SA,BL1,CL&dateFrom=${today}&dateTo=${todayPlusSix}`;
-    // const url = `http://api.football-data.org/v2/matches?competitions=PL,PD,SA,BL1,CL&dateFrom=2018-10-01&dateTo=2018-10-08`;
-    const url = `http://api.football-data.org/v2/matches?competitions=PL,PD,SA,BL1,CL&dateFrom=${startDate}&dateTo=${endDate}`;
+    const url = `https://api.football-data.org/v2/matches?competitions=PL,PD,SA,BL1,CL&dateFrom=${startDate}&dateTo=${endDate}`;
 
     fetch(url, {
       headers: {
