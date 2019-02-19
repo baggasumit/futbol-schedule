@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { format as formatDate, addDays } from 'date-fns';
 import Spinner from './Spinner';
 import MatchGroupByDate from './MatchGroupByDate';
@@ -7,7 +7,7 @@ import { Link } from '@reach/router';
 // const token = process.env.X_AUTH_TOKEN;
 const token = '0c9df6fde4af43f38755d775550be726';
 
-class Matches extends Component {
+class Matches extends React.Component {
   state = {
     matches: [],
     loading: true,
@@ -27,7 +27,6 @@ class Matches extends Component {
 
   fetchMatches = () => {
     const { favTeams } = this.props;
-    console.log('props:startDate', this.props.startDate);
     const startDate =
       this.props.startDate || formatDate(new Date(), 'YYYY-MM-DD');
     const endDate = formatDate(addDays(startDate, 6), 'YYYY-MM-DD');
@@ -39,7 +38,6 @@ class Matches extends Component {
       },
     })
       .then((response) => {
-        console.log(response);
         if (!response.ok) {
           let errorMsg = 'Failed to fetch matches from the API.';
           if (response.status === 429) {
@@ -51,7 +49,6 @@ class Matches extends Component {
       })
       .then((data) => {
         const filteredMatches = data.matches.filter((match) => {
-          // return true;
           return (
             favTeams.includes(match.homeTeam.id) ||
             favTeams.includes(match.awayTeam.id)
@@ -64,7 +61,7 @@ class Matches extends Component {
           );
         }
         const groupedMatches = filteredMatches.reduce((acc, match) => {
-          const date = formatDate(match.utcDate, 'dddd - MMM DD');
+          const date = formatDate(match.utcDate, 'dddd, MMM DD');
           if (acc[date]) {
             acc[date].push(match);
           } else {
@@ -80,7 +77,6 @@ class Matches extends Component {
         });
       })
       .catch((error) => {
-        // const errorMsg = error.name + ': ' + error.message;
         this.setState({ loading: false, errorMsg: error.message });
         console.log('Fetch error: ' + error);
       });
@@ -107,14 +103,19 @@ class Matches extends Component {
 
     return (
       <div className="matches">
-        <h2>Matches</h2>
         <div className="nav-matches">
-          <Link to={`/matches/${this.calculateStartDate(-7)}`}>
-            &lt; Previous 7 days
+          <Link
+            to={`/matches/${this.calculateStartDate(-7)}`}
+            title="Previous 7 days"
+          >
+            &#8249;
           </Link>
           <div>{this.matchesDateRange()}</div>
-          <Link to={`/matches/${this.calculateStartDate(7)}`}>
-            Next 7 days &gt;
+          <Link
+            to={`/matches/${this.calculateStartDate(7)}`}
+            title="Next 7 days"
+          >
+            &#8250;
           </Link>
         </div>
         <div className="match-list">

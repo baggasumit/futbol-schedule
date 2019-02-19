@@ -1,3 +1,21 @@
-.futbol-emoji {
-  font-size: 0.7em;
+body {
+  font-family: Lato, Georgia, 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: palevioletred;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 2rem;
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 10px;
+  }
 }
