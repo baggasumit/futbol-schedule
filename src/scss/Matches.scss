@@ -4,24 +4,28 @@
   }
   .nav-matches {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    a {
+      font-size: 3rem;
+      margin: 1rem;
+    }
   }
 }
 .match-group-date {
-  background: #fff6f6;
-
-  margin: 1rem 0;
-  padding: 1rem;
+  margin: 1.5rem 0;
 
   .match-date {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: $blue2;
   }
 }
 
 .match-group-league {
-  background: #ffdfdf;
+  border-bottom: 1px solid lightgray;
   margin: 1rem 0;
-  padding: 1rem;
+  padding-bottom: 1rem;
 
   .match-league {
     font-size: 1.2rem;
@@ -32,10 +36,15 @@
 
 .match {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   .home-team {
     width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
   .match-info {
     width: 20%;
@@ -43,6 +52,13 @@
   }
   .away-team {
     width: 40%;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .club-crest {
+    width: 1.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
 }

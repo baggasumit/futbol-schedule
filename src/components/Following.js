@@ -1,43 +1,23 @@
-import React, { Component } from 'react';
-import { teamList } from '../data/teams';
-import { Link } from '@reach/router';
+import React from 'react';
+import { teamDetails } from '../data/teams';
 
-class Following extends Component {
+class Following extends React.Component {
   render() {
-    const leagues = ['2021', '2014', '2019', '2002'];
-    const { favTeams, handleTeamSelect } = this.props;
+    const { favTeams, removeTeam } = this.props;
     return (
-      <>
-        <h2>Following</h2>
-        <Link to="" onClick={() => window.history.back()}>
-          &lt; Back
-        </Link>
-        <div className="following">
-          {leagues.map((leagueId) => {
-            const { name, teams } = teamList(leagueId);
-            return (
-              <div key={leagueId} className="league">
-                <div>{name}</div>
-                {teams.map((team) => {
-                  return (
-                    <div key={team.id} className="team">
-                      <input
-                        id={`team-${team.id}`}
-                        type="checkbox"
-                        checked={favTeams.includes(team.id)}
-                        onChange={handleTeamSelect}
-                      />
-                      <label htmlFor={`team-${team.id}`}>
-                        {team.shortName}
-                      </label>
-                    </div>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
-      </>
+      <div className="following">
+        {favTeams.map((teamId) => {
+          const { shortName } = teamDetails[teamId];
+          return (
+            <div key={teamId} className="team">
+              {shortName}
+              <button onClick={() => removeTeam(teamId)} title="Remove Team">
+                &times;
+              </button>
+            </div>
+          );
+        })}
+      </div>
     );
   }
 }

@@ -8,7 +8,6 @@ class MatchGroup extends Component {
     const { date, matches } = this.props;
     const matchesGroupedByLeague = matches.reduce((acc, match) => {
       const league = match.competition.name;
-      // const date = formatDate(match.utcDate, 'MMM DD');
       if (acc[league]) {
         acc[league].push(match);
       } else {

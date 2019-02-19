@@ -109,7 +109,7 @@ const teamsData = {
           name: 'England',
         },
         name: 'Manchester City FC',
-        shortName: 'Man City',
+        shortName: 'Manchester City',
         tla: 'MNC',
         crestUrl:
           'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
@@ -129,7 +129,7 @@ const teamsData = {
           name: 'England',
         },
         name: 'Manchester United FC',
-        shortName: 'Man United',
+        shortName: 'Manchester United',
         tla: 'MNU',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg',
@@ -418,7 +418,7 @@ const teamsData = {
         shortName: 'Athletic Bilbao',
         tla: 'ATH',
         crestUrl:
-          'http://upload.wikimedia.org/wikipedia/de/7/7f/Athletic_Club_Bilbao.svg',
+          'https://upload.wikimedia.org/wikipedia/en/9/98/Club_Athletic_Bilbao_logo.svg',
         address: 'Ibaigane, Alameda Mazarredo, 23 Bilbao 48009',
         phone: '+34 (944) 240877',
         website: 'http://www.athletic-club.eus',
@@ -434,8 +434,8 @@ const teamsData = {
           id: 2224,
           name: 'Spain',
         },
-        name: 'Club Atlético de Madrid',
-        shortName: 'Atlético Madrid',
+        name: 'Club Atletico de Madrid',
+        shortName: 'Atletico Madrid',
         tla: 'ATM',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/de/c/c1/Atletico_Madrid_logo.svg',
@@ -778,7 +778,7 @@ const teamsData = {
         shortName: 'Sevilla',
         tla: 'SEV',
         crestUrl:
-          'http://upload.wikimedia.org/wikipedia/en/8/86/Sevilla_cf_200px.png',
+          'https://upload.wikimedia.org/wikipedia/en/3/3b/Sevilla_FC_logo.svg',
         address: 'Calle Sevilla Fútbol Club, s/n Sevilla 41005',
         phone: '+34 (902) 510011',
         website: 'http://www.sevillafc.es',
@@ -1162,7 +1162,8 @@ const teamsData = {
         name: 'UC Sampdoria',
         shortName: 'Sampdoria',
         tla: 'SAM',
-        crestUrl: null,
+        crestUrl:
+          'https://upload.wikimedia.org/wikipedia/en/d/d2/U.C._Sampdoria_logo.svg',
         address: 'Piazza Borgo Pila, 39 Genova 16129',
         phone: '+39 (010) 5316711',
         website: 'http://www.sampdoria.it',
@@ -1201,7 +1202,8 @@ const teamsData = {
         name: 'SPAL 2013',
         shortName: 'SPAL 2013',
         tla: 'SPA',
-        crestUrl: null,
+        crestUrl:
+          'https://upload.wikimedia.org/wikipedia/en/3/3c/Spal2013_logo.svg',
         address: 'Corso Piave 28 Ferrara 44100',
         phone: '+39 (0532) 52752',
         website: 'http://www.spal2013.it',
@@ -1284,8 +1286,8 @@ const teamsData = {
           id: 2088,
           name: 'Germany',
         },
-        name: 'FC Bayern München',
-        shortName: 'Bayern M',
+        name: 'FC Bayern Munich',
+        shortName: 'Bayern Munich',
         tla: 'BAY',
         crestUrl:
           'https://upload.wikimedia.org/wikipedia/commons/1/1b/FC_Bayern_M%C3%BCnchen_logo_%282017%29.svg',
@@ -1425,7 +1427,7 @@ const teamsData = {
           name: 'Germany',
         },
         name: '1. FC Nürnberg',
-        shortName: 'Nürnberg',
+        shortName: 'Nurnberg',
         tla: 'FCN',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/commons/f/fa/1._FC_N%C3%BCrnberg_logo.svg',
@@ -1545,7 +1547,7 @@ const teamsData = {
           name: 'Germany',
         },
         name: 'TSV Fortuna 95 Düsseldorf',
-        shortName: 'Düsseldorf',
+        shortName: 'Dusseldorf',
         tla: 'DUS',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/commons/9/94/Fortuna_D%C3%BCsseldorf.svg',
@@ -1692,7 +1694,7 @@ const teamsData = {
           name: 'England',
         },
         name: 'Manchester City FC',
-        shortName: 'Man City',
+        shortName: 'Manchester City',
         tla: 'MNC',
         crestUrl:
           'https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg',
@@ -1712,7 +1714,7 @@ const teamsData = {
           name: 'England',
         },
         name: 'Manchester United FC',
-        shortName: 'Man United',
+        shortName: 'Manchester United',
         tla: 'MNU',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/de/d/da/Manchester_United_FC.svg',
@@ -1752,7 +1754,7 @@ const teamsData = {
           name: 'Spain',
         },
         name: 'Club Atlético de Madrid',
-        shortName: 'Club Atlético',
+        shortName: 'Atletico Madrid',
         tla: 'ATM',
         crestUrl:
           'http://upload.wikimedia.org/wikipedia/de/c/c1/Atletico_Madrid_logo.svg',
@@ -1932,7 +1934,7 @@ const teamsData = {
           name: 'France',
         },
         name: 'Olympique Lyonnais',
-        shortName: 'Olympique Lyon',
+        shortName: 'Lyon',
         tla: 'LYO',
         crestUrl:
           'https://upload.wikimedia.org/wikipedia/fr/thumb/e/e2/Olympique_lyonnais_%28logo%29.svg/130px-Olympique_lyonnais_%28logo%29.svg',
@@ -1972,7 +1974,7 @@ const teamsData = {
           name: 'Monaco',
         },
         name: 'AS Monaco FC',
-        shortName: 'AS Monaco',
+        shortName: 'Monaco',
         tla: 'ASM',
         crestUrl:
           'https://upload.wikimedia.org/wikipedia/fr/thumb/b/ba/AS_Monaco_FC.svg/130px-AS_Monaco_FC.svg',

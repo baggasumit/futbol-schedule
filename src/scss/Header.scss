@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid palevioletred;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+header img {
+  width: 40px;
+  margin: 0 2rem;
+}
+
+.futbol-emoji {
+  font-size: 0.7em;
+}
