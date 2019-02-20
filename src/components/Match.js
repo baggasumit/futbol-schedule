@@ -13,6 +13,14 @@ class Match extends Component {
     const awayTeamShortName = teamDetails[awayTeam.id].shortName;
     const homeCrestUrl = teamDetails[homeTeam.id].crestUrl || BlankCrest;
     const awayCrestUrl = teamDetails[awayTeam.id].crestUrl || BlankCrest;
+    let matchInfo;
+    if (status === 'SCHEDULED') {
+      matchInfo = format(new Date(utcDate), 'hh:mm A');
+    } else if (['POSTPONED', 'SUSPENDED', 'CANCELLED'].includes(status)) {
+      matchInfo = status;
+    } else {
+      matchInfo = `${score.fullTime.homeTeam} - ${score.fullTime.awayTeam}`;
+    }
 
     return (
       <div className="match">
@@ -20,11 +28,7 @@ class Match extends Component {
           {homeTeamShortName}
           <img className="club-crest" src={homeCrestUrl} alt="Club Crest" />
         </div>
-        <div className="match-info">
-          {status === 'SCHEDULED'
-            ? format(new Date(utcDate), 'hh:mm A')
-            : `${score.fullTime.homeTeam} - ${score.fullTime.awayTeam}`}
-        </div>
+        <div className="match-info">{matchInfo}</div>
         <div className="away-team">
           <img className="club-crest" src={awayCrestUrl} alt="Club Crest" />
           {awayTeamShortName}
