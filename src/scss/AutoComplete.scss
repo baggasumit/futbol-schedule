@@ -3,25 +3,32 @@
   position: relative;
 }
 
-.search-box {
+.search-bar {
   align-items: center;
-  border: 1px solid lightgrey;
   display: flex;
   width: 30rem;
 }
 
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+}
+
 .search-icon {
-  font-size: 1.6rem;
+  display: inline-block;
+  font-size: 1.7rem;
   transform: rotate(-45deg);
   margin-left: 1rem;
 }
 
 .search-input-box {
-  border: 1px solid transparent;
+  border: none;
   font-size: 1.2rem;
-  padding: 0.5rem;
-  flex: 1;
+  padding: 0.6rem;
   outline: none;
+  flex: 1;
 }
 
 button.add-team {
@@ -29,9 +36,15 @@ button.add-team {
   width: 6rem;
   font-size: 1rem;
   justify-self: flex-end;
+  background-color: #fff;
+  border: 2px solid $blue1;
+  border-radius: 0 1rem 1rem 0;
   &:disabled {
     color: #666666;
     cursor: not-allowed;
+  }
+  &:hover {
+    background-color: azure;
   }
 }
 

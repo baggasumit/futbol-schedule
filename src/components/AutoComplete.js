@@ -133,22 +133,24 @@ class AutoComplete extends React.Component {
     return (
       <React.Fragment>
         <div className="search">
-          <div className="search-box">
-            <span className="search-icon">&#9906;</span>
-            <input
-              type="text"
-              className="search-input-box"
-              onChange={onChange}
-              onKeyDown={onKeyDown}
-              value={userInput}
-              placeholder="Search Teams"
-            />
+          <div className="search-bar">
+            <div className="search-box">
+              <span className="search-icon">&#9906;</span>
+              <input
+                type="text"
+                className="search-input-box"
+                onChange={onChange}
+                onKeyDown={onKeyDown}
+                value={userInput}
+                placeholder="Search Teams"
+              />
+            </div>
             <button
               className="add-team"
               onClick={addTeam}
               disabled={selectedTeamId === ''}
             >
-              Add Team
+              Add
             </button>
           </div>
           {optionList}
