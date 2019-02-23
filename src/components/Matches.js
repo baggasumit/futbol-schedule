@@ -41,7 +41,8 @@ class Matches extends React.Component {
         if (!response.ok) {
           let errorMsg = 'Failed to fetch matches from the API.';
           if (response.status === 429) {
-            errorMsg = 'Too many requests. Please try again later';
+            errorMsg =
+              'Too many requests. Please try again after a minute. Limit is 10 requests/min.';
           }
           throw new Error(errorMsg);
         }
