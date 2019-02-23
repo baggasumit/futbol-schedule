@@ -3125,6 +3125,59 @@ const teamsData = {
   },
 };
 
+const leagueData = {
+  2001: {
+    name: 'Champions League',
+    emblemUrl: '',
+    country: 'Europe',
+  },
+  2002: {
+    name: 'Bundesliga',
+    emblemUrl: '',
+    country: 'Germany',
+  },
+  2003: {
+    name: 'Eredivisie',
+    emblemUrl: '',
+    country: 'Netherlands',
+  },
+  2013: {
+    name: 'Série A',
+    emblemUrl: '',
+    country: 'Brazil',
+  },
+  2014: {
+    name: 'Primera Division',
+    emblemUrl: '',
+    country: 'Spain',
+  },
+  2015: {
+    name: 'Ligue 1',
+    emblemUrl: '',
+    country: 'France',
+  },
+  2016: {
+    name: 'Championship',
+    emblemUrl: '',
+    country: 'England',
+  },
+  2017: {
+    name: 'Primeira Liga',
+    emblemUrl: '',
+    country: 'Portugal',
+  },
+  2019: {
+    name: 'Serie A',
+    emblemUrl: '',
+    country: 'Italy',
+  },
+  2021: {
+    name: 'Premier League',
+    emblemUrl: '',
+    country: 'England',
+  },
+};
+
 function getTeams() {
   let teamDetails = {};
   for (let leagueId in teamsData) {
@@ -3154,4 +3207,4 @@ function teamList(leagueId) {
 
 const teamDetails = getTeams();
 
-export { teamDetails, teamList };
+export { teamDetails, teamList, leagueData };
