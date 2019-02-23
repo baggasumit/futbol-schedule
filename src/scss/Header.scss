@@ -1,23 +1,31 @@
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 0;
   border-bottom: 2px solid palevioletred;
 }
 
-header a {
+.logo {
   display: flex;
   align-items: center;
-}
-
-header h1 {
+  flex: 1;
   font-size: 2rem;
   margin-left: 1rem;
 }
 
-header img {
-  width: 40px;
-  margin: 0 2rem;
+header a {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  margin: 0 0.7rem;
+  &:hover {
+    color: #aa315a;
+  }
+}
+
+.github-icon {
+  width: 3rem;
+  margin: 0 1rem;
 }
 
 .futbol-emoji {
