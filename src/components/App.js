@@ -3,6 +3,7 @@ import { Router } from '@reach/router';
 
 import Matches from './Matches';
 import Following from './Following';
+import Standings from './Standings';
 import AutoComplete from './AutoComplete';
 import Header from './Header';
 import { teamDetails } from '../data/teams';
@@ -66,6 +67,8 @@ class App extends Component {
           <Router>
             <Matches path="/" favTeams={favTeams} />
             <Matches path="/matches/:startDate" favTeams={favTeams} />
+            <Standings path="/standings" />
+            <Standings path="/standings/:leagueId" />
           </Router>
         </div>
       </div>
