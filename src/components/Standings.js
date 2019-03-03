@@ -64,9 +64,9 @@ class Standings extends React.Component {
         <div>Pos</div>
         <div className="team-name">Team</div>
         <div>P</div>
-        <div>W</div>
-        <div>D</div>
-        <div>L</div>
+        <div className="only-large">W</div>
+        <div className="only-large">D</div>
+        <div className="only-large">L</div>
         <div>Pts</div>
       </div>
     );

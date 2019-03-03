@@ -30,18 +30,19 @@
   div {
     display: inline-block;
     margin: 0 0.5rem;
-    flex-basis: 3rem;
+    flex: 1;
     text-align: right;
   }
 
   .club-crest {
-    width: 1.5rem;
+    width: 1.6rem;
+    height: 1.8rem;
     margin-left: 0.5rem;
     margin-right: 0.8rem;
   }
 
   .team-name {
-    flex: 1;
+    flex: 8;
     text-align: left;
     display: flex;
     align-items: center;
@@ -49,5 +50,11 @@
 
   &.header-row {
     background-color: #e9ebee;
+  }
+
+  @media (max-width: 600px) {
+    .only-large {
+      display: none;
+    }
   }
 }

@@ -23,15 +23,15 @@ function TableRow(props) {
         <img
           src={crestUrl || BlankCrest}
           onError={handleImage404}
-          className="club-crest"
+          className="club-crest only-large"
           alt="Club crest"
         />
         {name}
       </div>
       <div>{playedGames}</div>
-      <div>{won}</div>
-      <div>{draw}</div>
-      <div>{lost}</div>
+      <div className="only-large">{won}</div>
+      <div className="only-large">{draw}</div>
+      <div className="only-large">{lost}</div>
       <div>{points}</div>
     </div>
   );
