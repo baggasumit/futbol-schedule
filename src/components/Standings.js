@@ -4,8 +4,7 @@ import Spinner from './Spinner';
 import TableRow from './TableRow';
 import { leagueData } from '../data/teams';
 
-// const token = process.env.X_AUTH_TOKEN;
-const token = '0c9df6fde4af43f38755d775550be726';
+const token = process.env.REACT_APP_API_TOKEN;
 
 class Standings extends React.Component {
   state = {
