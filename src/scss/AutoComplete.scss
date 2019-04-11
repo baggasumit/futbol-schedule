@@ -81,5 +81,10 @@ ul.options li.option-active {
 }
 
 .no-options {
+  background-color: #fff;
+  border: 1px solid lightgrey;
   color: grey;
+  padding: 1rem;
+  position: absolute;
+  width: 24rem;
 }

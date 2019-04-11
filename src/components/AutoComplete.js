@@ -124,7 +124,7 @@ class AutoComplete extends React.Component {
       } else {
         optionList = (
           <div className="no-options">
-            <em>No Option!</em>
+            <em>No teams found!</em>
           </div>
         );
       }
