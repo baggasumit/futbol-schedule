@@ -18,7 +18,12 @@ class Matches extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.startDate !== this.props.startDate) {
+    // If user changed start date (different url) or added a team then
+    // refetch schedule
+    if (
+      prevProps.startDate !== this.props.startDate ||
+      prevProps.favTeams.length < this.props.favTeams.length
+    ) {
       this.setState({ loading: true });
       this.fetchMatches();
     }
