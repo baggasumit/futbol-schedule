@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        <h1>
+        <h1 aria-label="Fútbol Schedule">
           Fútb
           <span role="img" aria-label="Football emoji" className="futbol-emoji">
             ⚽️

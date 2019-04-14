@@ -9,7 +9,7 @@ function TableRow(props) {
   const { row } = props;
   const {
     position,
-    team: { id, name, crestUrl },
+    team: { name, crestUrl },
     playedGames,
     won,
     draw,

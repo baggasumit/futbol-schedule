@@ -59,7 +59,6 @@ class Matches extends React.Component {
             favTeams.includes(match.awayTeam.id)
           );
         });
-        console.log(filteredMatches);
         if (filteredMatches.length === 0) {
           throw new Error(
             'No matches for your followed teams during this time period.'
@@ -112,6 +111,7 @@ class Matches extends React.Component {
           <Link
             to={`/matches/${this.calculateStartDate(-7)}`}
             title="Previous 7 days"
+            aria-label="Previous 7 days"
           >
             &#8249;
           </Link>
@@ -119,6 +119,7 @@ class Matches extends React.Component {
           <Link
             to={`/matches/${this.calculateStartDate(7)}`}
             title="Next 7 days"
+            aria-label="Next 7 days"
           >
             &#8250;
           </Link>

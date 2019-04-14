@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from '@reach/router';
 import Spinner from './Spinner';
 import TableRow from './TableRow';
 import { leagueData } from '../data/teams';
@@ -42,8 +41,10 @@ class Standings extends React.Component {
         return response.json();
       })
       .then((data) => {
+        if (data.standings.length === 0) {
+          throw new Error('Could not fetch standings at this time!');
+        }
         const table = data.standings[0].table;
-        // console.log(table);
 
         this.setState({
           table,
@@ -80,7 +81,6 @@ class Standings extends React.Component {
 
   render() {
     const { table, loading, errorMsg } = this.state;
-    const league = leagueData[this.props.leagueId];
 
     return (
       <div className="standings">

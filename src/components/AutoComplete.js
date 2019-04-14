@@ -135,7 +135,9 @@ class AutoComplete extends React.Component {
         <div className="search">
           <div className="search-bar">
             <div className="search-box">
-              <span className="search-icon">&#9906;</span>
+              <span className="search-icon" aria-label="Search icon">
+                &#9906;
+              </span>
               <input
                 type="text"
                 className="search-input-box"
@@ -149,6 +151,7 @@ class AutoComplete extends React.Component {
               className="add-team"
               onClick={addTeam}
               disabled={selectedTeamId === ''}
+              aria-label="Add team"
             >
               Add
             </button>

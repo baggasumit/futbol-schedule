@@ -11,7 +11,11 @@ class Following extends React.Component {
           return (
             <div key={teamId} className="team">
               {shortName}
-              <button onClick={() => removeTeam(teamId)} title="Remove Team">
+              <button
+                onClick={() => removeTeam(teamId)}
+                title="Remove Team"
+                aria-label="Remove Team"
+              >
                 &times;
               </button>
             </div>
