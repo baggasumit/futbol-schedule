@@ -9,10 +9,20 @@ class Match extends Component {
   render() {
     const { match } = this.props;
     const { status, utcDate, homeTeam, awayTeam, score } = match;
-    const homeTeamShortName = teamDetails[homeTeam.id].shortName;
-    const awayTeamShortName = teamDetails[awayTeam.id].shortName;
-    const homeCrestUrl = teamDetails[homeTeam.id].crestUrl || BlankCrest;
-    const awayCrestUrl = teamDetails[awayTeam.id].crestUrl || BlankCrest;
+
+    const homeTeamShortName =
+      (teamDetails[homeTeam.id] && teamDetails[homeTeam.id].shortName) ||
+      homeTeam.name;
+    const awayTeamShortName =
+      (teamDetails[awayTeam.id] && teamDetails[awayTeam.id].shortName) ||
+      awayTeam.name;
+    const homeCrestUrl =
+      (teamDetails[homeTeam.id] && teamDetails[homeTeam.id].crestUrl) ||
+      BlankCrest;
+    const awayCrestUrl =
+      (teamDetails[awayTeam.id] && teamDetails[awayTeam.id].crestUrl) ||
+      BlankCrest;
+
     let matchInfo;
     if (status === 'SCHEDULED') {
       matchInfo = format(new Date(utcDate), 'hh:mm A');
