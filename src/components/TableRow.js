@@ -1,9 +1,5 @@
 import React from 'react';
-import BlankCrest from '../images/BlankCrest.jpg';
-
-function handleImage404(event) {
-  event.target.src = BlankCrest;
-}
+import CrestImage from './CrestImage';
 
 function TableRow(props) {
   const { row } = props;
@@ -20,12 +16,7 @@ function TableRow(props) {
     <div className="table-row">
       <div>{position}</div>
       <div className="team-name">
-        <img
-          src={crestUrl || BlankCrest}
-          onError={handleImage404}
-          className="club-crest only-large"
-          alt="Club crest"
-        />
+        <CrestImage src={crestUrl} />
         {name}
       </div>
       <div>{playedGames}</div>

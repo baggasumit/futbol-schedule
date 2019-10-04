@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import BlankCrest from '../images/BlankCrest.jpg';
 import { format } from 'date-fns';
 import { teamDetails } from '../data/teams';
+import CrestImage from './CrestImage';
 
 class Match extends Component {
   state = { data: null };
@@ -17,11 +17,9 @@ class Match extends Component {
       (teamDetails[awayTeam.id] && teamDetails[awayTeam.id].shortName) ||
       awayTeam.name;
     const homeCrestUrl =
-      (teamDetails[homeTeam.id] && teamDetails[homeTeam.id].crestUrl) ||
-      BlankCrest;
+      teamDetails[homeTeam.id] && teamDetails[homeTeam.id].crestUrl;
     const awayCrestUrl =
-      (teamDetails[awayTeam.id] && teamDetails[awayTeam.id].crestUrl) ||
-      BlankCrest;
+      teamDetails[awayTeam.id] && teamDetails[awayTeam.id].crestUrl;
 
     let matchInfo;
     if (status === 'SCHEDULED') {
@@ -36,11 +34,11 @@ class Match extends Component {
       <div className="match">
         <div className="home-team">
           {homeTeamShortName}
-          <img className="club-crest" src={homeCrestUrl} alt="Club Crest" />
+          <CrestImage src={homeCrestUrl} />
         </div>
         <div className="match-info">{matchInfo}</div>
         <div className="away-team">
-          <img className="club-crest" src={awayCrestUrl} alt="Club Crest" />
+          <CrestImage src={awayCrestUrl} />
           {awayTeamShortName}
         </div>
       </div>
