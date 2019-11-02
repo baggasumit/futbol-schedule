@@ -9,6 +9,7 @@ class Match extends Component {
   render() {
     const { match } = this.props;
     const { status, utcDate, homeTeam, awayTeam, score } = match;
+    const inPlay = ['IN_PLAY', 'PAUSED'].includes(status);
 
     const homeTeamShortName =
       (teamDetails[homeTeam.id] && teamDetails[homeTeam.id].shortName) ||
@@ -36,7 +37,9 @@ class Match extends Component {
           {homeTeamShortName}
           <CrestImage src={homeCrestUrl} />
         </div>
-        <div className="match-info">{matchInfo}</div>
+        <div className={'match-info' + (inPlay ? ' in-play' : '')}>
+          {matchInfo}
+        </div>
         <div className="away-team">
           <CrestImage src={awayCrestUrl} />
           {awayTeamShortName}

@@ -47,22 +47,44 @@
   justify-content: space-between;
   font-size: 1.4rem;
   margin-bottom: 1.2rem;
+  position: relative;
+
   .home-team {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
   }
+
   .match-info {
     width: 20%;
     text-align: center;
+
+    &.in-play::after {
+      content: '●';
+      color: darkgreen;
+      animation: blinker 2s linear infinite;
+      font-size: 1rem;
+      vertical-align: top;
+      padding-left: 0.2rem;
+      position: absolute;
+      top: -5px;
+
+      @keyframes blinker {
+        50% {
+          opacity: 0.2;
+        }
+      }
+    }
   }
+
   .away-team {
     width: 40%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
+
   .club-crest {
     width: 1.6rem;
     height: 1.8rem;
