@@ -253,7 +253,7 @@ const teamsData = {
         shortName: 'Leicester City',
         tla: 'LEI',
         crestUrl:
-          'https://upload.wikimedia.org/wikipedia/en/6/63/Leicester02.png',
+          'https://upload.wikimedia.org/wikipedia/en/2/2d/Leicester_City_crest.svg',
         address: 'The Walkers Stadium, Filbert Way Leicester LE2 7FL',
         phone: '+44 (0844) 8156000',
         website: 'https://www.lcfc.com',
@@ -925,7 +925,7 @@ const teamsData = {
         shortName: 'Cagliari',
         tla: 'CAG',
         crestUrl:
-          'https://upload.wikimedia.org/wikipedia/de/3/3d/Cagliari_Calcio.svg',
+          'https://upload.wikimedia.org/wikipedia/en/6/61/Cagliari_Calcio_1920.svg',
         address: 'Viale la Plaia 15 Cagliari 09123',
         phone: '+39 (070) 604 201',
         website: 'https://www.cagliaricalcio.net',
@@ -1043,7 +1043,7 @@ const teamsData = {
         shortName: 'Napoli',
         tla: 'NAP',
         crestUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/2/28/S.S.C._Napoli_logo.svg',
+          'https://upload.wikimedia.org/wikipedia/commons/2/2d/SSC_Neapel.svg',
         address:
           'Centro Tecnico di Castel Volturno, Via S.S. Domitana, Km 35 Castel Volturno 81030',
         phone: '+39 (081) 5095344',
