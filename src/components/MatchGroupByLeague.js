@@ -12,7 +12,6 @@ class MatchGroupByLeague extends Component {
     return (
       <div className="match-group-league">
         <div className="match-league">{league.name}</div>
-        <Link to={`/standings/${leagueId}`}>Points Table</Link>
         {matches.map((match) => (
           <Match key={match.id} match={match} />
         ))}
